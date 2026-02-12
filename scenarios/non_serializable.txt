@@ -1,0 +1,12 @@
+# Phase 3: non-serializable schedule with cycle T1 <-> T2
+INIT A=100 B=100
+MODE buffered
+
+T1 BEGIN
+T2 BEGIN
+T1 READ A
+T2 READ B
+T1 WRITE B 90
+T2 WRITE A 80
+T1 COMMIT
+T2 COMMIT

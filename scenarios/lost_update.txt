@@ -1,0 +1,12 @@
+# Phase 1: lost update interleaving
+INIT A=100
+MODE direct
+
+T1 BEGIN
+T2 BEGIN
+T1 READ A
+T2 READ A
+T1 WRITE A 90
+T2 WRITE A 80
+T1 COMMIT
+T2 COMMIT

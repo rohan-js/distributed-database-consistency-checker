@@ -1,0 +1,10 @@
+# Phase 2: dirty read
+INIT A=100
+MODE direct
+
+T1 BEGIN
+T2 BEGIN
+T1 WRITE A 50
+T2 READ A
+T1 ROLLBACK
+T2 COMMIT

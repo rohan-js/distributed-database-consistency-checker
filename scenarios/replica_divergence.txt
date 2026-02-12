@@ -1,0 +1,8 @@
+# Phase 4: replica divergence caused by partition
+INIT A=100
+MODE buffered
+
+PARTITION ReplicaB
+T1 BEGIN
+T1 WRITE A 40
+T1 COMMIT
